@@ -1,0 +1,69 @@
+/**
+ * assets/css/custom.css
+ * Estilos globales y personalizaciones adicionales a Tailwind CSS
+ */
+
+/* ==========================================================================
+   1. Personalización de la Barra de Desplazamiento (Scrollbar)
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9; /* slate-100 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* slate-300 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* slate-400 */
+}
+
+/* ==========================================================================
+   2. Animaciones Personalizadas (Keyframes)
+   ========================================================================== */
+
+/* Animación de desvanecimiento y ligero zoom para los modales */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* 
+ * Esta clase se la podemos agregar al div blanco dentro del modal 
+ * para que aparezca suavemente cuando John o tú hagan clic en los botones.
+ */
+.animate-modal {
+    animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   3. Alertas Flotantes
+   ========================================================================== */
+.alerta-flotante {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Alertas Flotantes (Toast)
+   ========================================================================== */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
